@@ -4,22 +4,14 @@ import java.util.ArrayList;
 
 public class HeapSorting {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-//		HeapSorting.printArray(a);
-//		HeapSorting.performHeapSort(a, a.length	);
-		
-	}
-	
-	public ArrayList<String> sortArray(ArrayList<String> a)  {
+	public ArrayList<File> sortArray(ArrayList<File> a)  {
 		performHeapSort(a, a.size()	);
 		return a;
 	}
 	
 	
 	
-	 void performHeapSort(ArrayList<String> a, int n)
+	 void performHeapSort(ArrayList<File> a, int n)
 	{
 
 		//First Heapify
@@ -30,7 +22,7 @@ public class HeapSorting {
 		for ( int i = n -1; i >= 0; i--)
 		{
 
-			String temp = a.get(0);
+			File temp = a.get(0);
 			a.set(0, a.get(i));
 			a.set(i, temp);
 		
@@ -39,24 +31,24 @@ public class HeapSorting {
 		}
 	}
 
-	static void heapify(ArrayList<String> a, int i, int n)
+	static void heapify(ArrayList<File> a, int i, int n)
 	{
 		int top = i;
 		int left = 2 * i + 1;
 		int right = 2 * i + 2;
 		
-		String temp;
+		File temp;
 
 		if (left < n)
 		{
-			int comparetopLeft = a.get(top).compareTo(a.get(left));  
+			int comparetopLeft = a.get(top).fileNameString.compareTo(a.get(left).fileNameString);  
 			if (comparetopLeft < 0) {
 				top = left;
 			}
 		}
 		if (right < n)
 		{
-			int comparetopRight = a.get(top).compareTo(a.get(right));  
+			int comparetopRight = a.get(top).fileNameString.compareTo(a.get(right).fileNameString);  
 			if (comparetopRight < 0) {
 				top = right;
 

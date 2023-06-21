@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Home {
 
-	public static ArrayList <String> files = new ArrayList<String>();
+	public static ArrayList <File> files = new ArrayList<File>();
 
 	void displayHomeScreen()
 	{
@@ -39,14 +39,14 @@ public class Home {
 		{
 		case 1:
 		{
-
 			HeapSorting sorting = new HeapSorting();
-			ArrayList<String> sortedFiles = sorting.sortArray(files);
+			ArrayList<File> sortedFiles = sorting.sortArray(files);
 			if (sortedFiles.size() == 0) {
 				System.out.println("No Files available please add some files");
+				displayHomeScreen();
 			}
 			else {
-				displayFiles(sortedFiles);
+				displayFiles(sortedFiles, scanner);
 			}
 
 		}
@@ -55,7 +55,9 @@ public class Home {
 				
 		case 2:
 		{
-			
+			FileOperations fileOperations = new FileOperations();
+			fileOperations.displayFileOperationScreen();
+
 		}
 			break;
 		case 3:
@@ -71,16 +73,24 @@ public class Home {
 		}
 	}
 	
-	void displayFiles(ArrayList<String> sortedList)
+	void displayFiles(ArrayList<File> sortedList, Scanner scanner)
 	{
 		for (int i=0; i < sortedList.size(); i++) {
-			String fileString = sortedList.get(i);
-			System.out.println(+i+"- "+fileString);
+			String fileString = sortedList.get(i).fileNameString;
+			System.out.println(+(i+1)+". "+fileString);
 		}
+		
+		System.out.println();
+		System.out.println("Press 0 to go back.");
+		
+		if (scanner.hasNextInt()) {
+			if (scanner.nextInt() == 0) {
+				displayHomeScreen();
+			}
+		}
+
+
 	}
 
 }
 
-class FileList{
-	
-}
