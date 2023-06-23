@@ -21,11 +21,11 @@ Follow these steps to install and set up the project in Eclipse:
 ## Source Code Files
 The major purpose and functionality of the source code files, the role of each file and its relationship with other files are mentioned below:
 
-**Welcome.java**: Contains the welcome class of the project, responsible for initializing and running the application.
-**Home.java**: Class to list out the major 3 functionality of the application(Files list, File operations and Exit). In this class the code for the file listing is added.
-**HeapSorting.java**: The Files are sorted in ascending order using the Heap sorting technique, the codes for this technique is added in this class. 
-**File.java**: Object class for the file, with three property (name, path and size).
-**FileOperations.java** : Operations options and their implementations are added in this class. Operations are:
+- **Welcome.java**: Contains the welcome class of the project, responsible for initializing and running the application.
+- **Home.java**: Class to list out the major 3 functionality of the application(Files list, File operations and Exit). In this class the code for the file listing is added.
+- **HeapSorting.java**: The Files are sorted in ascending order using the Heap sorting technique, the codes for this technique is added in this class. 
+- **File.java**: Object class for the file, with three property (name, path and size).
+- **FileOperations.java** : Operations options and their implementations are added in this class. Operations are:
     - Add Files
     - Delete Files
     - Search Files
