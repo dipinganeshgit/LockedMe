@@ -1,5 +1,5 @@
 # LockedMe
-Locked Me SimpliLearn Course 1 Project where teh user will be having option to add new files, delete them, search them and list them in ascending order based on the file name.
+Locked Me SimpliLearn Course 1 Project where the user will be having option to add new files, delete them, search them and list them in ascending order based on the file name.
 
 
 ## Prerequisites
@@ -17,6 +17,15 @@ Follow these steps to install and set up the project in Eclipse:
 - In the import wizard, choose "General" -> "Existing Projects into Workspace" and click "Next."
 - Click on "Browse" to locate the folder where you cloned or downloaded the project.
 - Select the project and click "Finish."
+
+## Features
+- Welcome screen with and ASCII string in it
+- Home screen with option: File List, File operations and Exit
+- Files listed in ArrayList and in ascending order using Heap Sorting
+- File Operations - Add, Delete, Search
+- Create a new File using custom constructor and add file to arrayList using '.add()' method
+- Delete file using .remove() method
+- Search feature implemented using streams and filter methodologies.
 
 ## Source Code Files
 The major purpose and functionality of the source code files, the role of each file and its relationship with other files are mentioned below:
