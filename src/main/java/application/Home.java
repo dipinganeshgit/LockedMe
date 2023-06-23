@@ -14,8 +14,6 @@ public class Home {
 	{
 		Scanner scanner = new Scanner(System.in);
 		System.out.println();
-		System.out.println();
-		System.out.println();
 
 		System.out.println("#                       \n"
 				+ "#   _____               \n"
@@ -42,6 +40,8 @@ public class Home {
 			HeapSorting sorting = new HeapSorting();
 			ArrayList<File> sortedFiles = sorting.sortArray(files);
 			if (sortedFiles.size() == 0) {
+				System.out.println();
+				System.out.println();
 				System.out.println("No Files available please add some files");
 				displayHomeScreen();
 			}
@@ -55,6 +55,7 @@ public class Home {
 				
 		case 2:
 		{
+
 			FileOperations fileOperations = new FileOperations();
 			fileOperations.displayFileOperationScreen();
 
@@ -62,7 +63,10 @@ public class Home {
 			break;
 		case 3:
 		{
-				
+			System.out.println("Thank you see you soon.");
+
+			Welcome welcome = new Welcome();
+			welcome.displayWelcomeString();
 		}
 			break;
 		
@@ -75,6 +79,8 @@ public class Home {
 	
 	void displayFiles(ArrayList<File> sortedList, Scanner scanner)
 	{
+		System.out.println("These are the saved filenames.");
+
 		for (int i=0; i < sortedList.size(); i++) {
 			String fileString = sortedList.get(i).fileNameString;
 			System.out.println(+(i+1)+". "+fileString);

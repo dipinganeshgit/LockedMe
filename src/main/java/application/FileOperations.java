@@ -3,7 +3,9 @@ package application;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 import java.util.List;
+import java.util.Optional;
 
 
 public class FileOperations {
@@ -104,9 +106,10 @@ public class FileOperations {
 	{
 		HeapSorting sorting = new HeapSorting();
 		ArrayList<File> sortedFiles = sorting.sortArray(Home.files);
-		
+		System.out.println("Full List == "+sortedFiles);
+
 		List<File> searchedFiles = sortedFiles.stream()
-			    .filter(file -> file.fileNameString.contains(searchText)).collect(null);
+			    .filter(file -> file.fileNameString.contains(searchText)).collect(Collectors.toList());
 		System.out.println("Filtered == "+searchedFiles);
 
 	}

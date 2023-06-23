@@ -60,8 +60,6 @@ public class HeapSorting {
 			temp = a.get(i);
 			a.set(i, a.get(top));
 			a.set(top, temp);
-			System.out.println("temp  "+temp);
-
 			heapify(a, top, n);
 		}
 
