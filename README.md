@@ -22,7 +22,7 @@ Follow these steps to install and set up the project in Eclipse:
 - Welcome screen with and ASCII string in it
 - Home screen with option: File List, File operations and Exit
 - Files listed in ArrayList and in ascending order using Heap Sorting
-- File Operations - Add, Delete, Search
+- File Operations - Add, Delete, Search, Go Back
 - Create a new File using custom constructor and add file to arrayList using '.add()' method
 - Delete file using .remove() method
 - Search feature implemented using streams and filter methodologies.
