@@ -9,11 +9,8 @@ public class HeapSorting {
 		return a;
 	}
 	
-	
-	
 	 void performHeapSort(ArrayList<File> a, int n)
 	{
-
 		//First Heapify
 		for ( int i = n/2 -1; i >= 0; i--)
 			heapify(a,i,n);

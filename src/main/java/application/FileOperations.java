@@ -38,7 +38,6 @@ public class FileOperations {
 			System.out.println("Invalid Entry.");
 			displayFileOperationScreen();
 		}
-
 	}
 	
 	private void launchInitialOptionSelection(Scanner scanner, int option) {
@@ -47,30 +46,22 @@ public class FileOperations {
 		case 1:
 		{
 			//Add File
-
 			addFile(scanner);
-
 		}
-
 			break;
 				
 		case 2:
 		{
 			//Delete File
-			
 			deleteFileOptions();
-
-			
-
 		}
 			break;
 		case 3:
 		{
 			// Search File
-			
 			System.out.println("Please search the file name.");
 			String searcText = scanner.next();
-			searchFile(searcText);
+			searchFile(searcText, scanner);
 		}
 			break;
 			
@@ -102,7 +93,7 @@ public class FileOperations {
 		scanner.close();
 	}
 	
-	void searchFile(String searchText)
+	void searchFile(String searchText, Scanner scanner)
 	{
 		HeapSorting sorting = new HeapSorting();
 		ArrayList<File> sortedFiles = sorting.sortArray(Home.files);
@@ -114,6 +105,14 @@ public class FileOperations {
 		for (int i=0; i < searchedFiles.size(); i++) {
 			File fileObject = searchedFiles.get(i);
 			System.out.println(+(i+1)+".  "+"Name: "+fileObject.fileNameString+"\n    "+"Size: "+fileObject.fileSize+"kb"+"\n    "+"Path: "+fileObject.filePathString);
+		}
+		
+		System.out.println("Press 0 to go back.");
+		
+		if (scanner.hasNextInt()) {
+			if (scanner.nextInt() == 0) {
+				displayFileOperationScreen();
+			}
 		}
 	}
 	

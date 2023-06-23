@@ -28,7 +28,6 @@ public class Home {
 		System.out.println("3. Exit");
 	
 		int option = scanner.nextInt();
-		
 		launchInitialOptionSelection(scanner, option);
 	}
 	
@@ -48,23 +47,19 @@ public class Home {
 			else {
 				displayFiles(sortedFiles, scanner);
 			}
-
 		}
 
 			break;
 				
 		case 2:
 		{
-
 			FileOperations fileOperations = new FileOperations();
 			fileOperations.displayFileOperationScreen();
-
 		}
 			break;
 		case 3:
 		{
 			System.out.println("Thank you see you soon.");
-
 			Welcome welcome = new Welcome();
 			welcome.displayWelcomeString();
 		}
@@ -94,9 +89,6 @@ public class Home {
 				displayHomeScreen();
 			}
 		}
-
-
 	}
-
 }
 

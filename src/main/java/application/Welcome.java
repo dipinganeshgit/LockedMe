@@ -12,7 +12,6 @@ public class Welcome {
 
 	void displayWelcomeString()
 	{
-
 		System.out.println("			#                                                                                   \n"
 				+ "			#   _ _ _     _                      _          __            _         _ _____     \n"
 				+ "			#  | | | |___| |___ ___ _____ ___   | |_ ___   |  |   ___ ___| |_ ___ _| |     |___ \n"
