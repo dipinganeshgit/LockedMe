@@ -28,7 +28,8 @@ Follow these steps to install and set up the project in Eclipse:
 - Search feature implemented using streams and filter methodologies.
 
 ## Source Code Files
-The major purpose and functionality of the source code files, the role of each file and its relationship with other files are mentioned below:
+The major purpose and functionality of the source code files, the role of each file and its relationship with other files are mentioned below: 
+[Files](https://github.com/dipinganeshgit/LockedMe/tree/main/src/main/java/application)
 
 - **Welcome.java**: Contains the welcome class of the project, responsible for initializing and running the application.
 - **Home.java**: Class to list out the major 3 functionality of the application(Files list, File operations and Exit). In this class the code for the file listing is added.
