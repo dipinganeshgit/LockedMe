@@ -2,7 +2,7 @@
 Locked Me SimpliLearn Course 1 Project where teh user will be having option to add new files, delete them, search them and list them in ascending order based on the file name.
 
 
-**Prerequisites**
+#Prerequisites
 Before getting started, ensure you have the following prerequisites:
 
 - Java Development Kit (JDK) installed on your machine.
