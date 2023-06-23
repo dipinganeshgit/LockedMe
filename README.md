@@ -42,7 +42,7 @@ The major purpose and functionality of the source code files, the role of each f
  
 ## Screenshots
 Added screenshots of the project excecution console for all the features.
-
+[Screenshots](https://github.com/dipinganeshgit/LockedMe/edit/main/Screenshots)
 
 
 
