@@ -39,6 +39,9 @@ The major purpose and functionality of the source code files, the role of each f
     - Delete Files
     - Search Files
     - Go Back
+ 
+## Screenshots
+Added screenshots of the project excecution console for all the features.
 
 
 
