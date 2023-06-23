@@ -106,12 +106,15 @@ public class FileOperations {
 	{
 		HeapSorting sorting = new HeapSorting();
 		ArrayList<File> sortedFiles = sorting.sortArray(Home.files);
-		System.out.println("Full List == "+sortedFiles);
 
 		List<File> searchedFiles = sortedFiles.stream()
 			    .filter(file -> file.fileNameString.contains(searchText)).collect(Collectors.toList());
-		System.out.println("Filtered == "+searchedFiles);
+		System.out.println("The search results are: ");
 
+		for (int i=0; i < searchedFiles.size(); i++) {
+			File fileObject = searchedFiles.get(i);
+			System.out.println(+(i+1)+".  "+"Name: "+fileObject.fileNameString+"\n    "+"Size: "+fileObject.fileSize+"kb"+"\n    "+"Path: "+fileObject.filePathString);
+		}
 	}
 	
 	private List<File> Arrays(ArrayList<File> sortedFiles) {
@@ -140,8 +143,9 @@ public class FileOperations {
 		int option = scannerDelete.nextInt();
 		
 		if (option > 0 && option < sortedList.size()) {
+			String filename = (String)Home.files.get((option-1)).fileNameString;
 			Home.files.remove((option -1));
-			System.out.println("Successfully Deleted the file.");
+			System.out.println("Successfully Deleted the file with name "+filename);
 			displayFileOperationScreen();
 
 		}

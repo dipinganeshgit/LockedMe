@@ -82,8 +82,8 @@ public class Home {
 		System.out.println("These are the saved filenames.");
 
 		for (int i=0; i < sortedList.size(); i++) {
-			String fileString = sortedList.get(i).fileNameString;
-			System.out.println(+(i+1)+". "+fileString);
+			File fileObject = sortedList.get(i);
+			System.out.println(+(i+1)+".  "+"Name: "+fileObject.fileNameString+"\n    "+"Size: "+fileObject.fileSize+"kb"+"\n    "+"Path: "+fileObject.filePathString);
 		}
 		
 		System.out.println();

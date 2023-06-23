@@ -36,7 +36,6 @@ public class Welcome {
 	
 	private void moveToMainMenu(String action, Scanner scanner) {
 		if (action.equals("H")) {
-			System.out.println("Enter pressed");
 			
 			Home home = new Home();
 			home.displayHomeScreen();

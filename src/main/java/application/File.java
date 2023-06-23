@@ -1,5 +1,5 @@
 package application;
-
+import java.util.Random;
 class File {
 
 	String fileNameString;
@@ -16,8 +16,11 @@ class File {
 	File(String fileName)
 	{
 		this.fileNameString = fileName;
-		this.filePathString = "";
-		this.fileSize = 0;
+		this.filePathString = fileName+".png";
+		
+		Random ran = new Random();
+		int x = ran.nextInt(100);
+		this.fileSize = x;
 	}
 
 }
